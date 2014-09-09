@@ -36,6 +36,9 @@ unsigned int iPlayerCannon;
 float fPlayerX = iScreenWidth * 0.5f;
 float fPlayerY = 80.f;
 
+//aliens
+unsigned int alienShips;
+
 ///////////////////////////////////////////////////////////
 
 enum GAMESTATES
@@ -135,7 +138,45 @@ int main(int argc, char* argv[]) // main
 				{
 					fPlayerX = iScreenWidth - iPlayerCannonWidth / 2; //width of screen - player width /2
 				}
+			
+
+
+			///////////////////////////////////////Aliens//////////////
+			unsigned int alienShip[5];
+			float fEnemyX = iScreenWidth * 0.2f;
+			float fEnemyY - iScreenHeight * 0.75;
+			for (int i = 0; i < 5; ++i)
+			
+			
+				alienShips[i] = CreateSprite("./images/invaders/_1_00.png", fPlayerWidth, fPlayerHeight, true);
+				MoveSprite(alienShips[i], fEnemyX, fEnemyY);
+				fEnemyX += 0.12 * iScreenWidth;
+			
+				for (int i = 0; i < 5; ++i)
+				{
+					DrawSprite(alienShips[i]);
+				}
+			
+
+
+
+
+
+			/*
+			unsigned int alienShips[15];
+			float fEnemyX = iScreenWidth * 0.2f;
+			float fEnemyY = iScreenHeight * 0.7f;
+			for (int i = 0; i < 15; ++i
+			{
+				alienShips[i] = CreateSprite("./images/invaders/_1_00.png", fPlayerWidth, fPlayerHeight, true);
+				MoveSprite(alienShips[i], fEnemyX, fEnemyY);
+				fEnemyX += 0.12 * 0.8f)
+				{
+				fEnemyX = iScreenWidth * 0.2f;
+				fEnemy -= 0.08 * iScreenHeight;
+				}
 			}
+			*/
 
 			break;
 
